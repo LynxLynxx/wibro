@@ -16,6 +16,7 @@ def parser():
     p = argparse.ArgumentParser(description='Program wyświetlający wykresy z danych otrzymanych ze strumienia wyjściowego. Użytkownik podaje ile wykresów ma zostać wyświetlonych, oraz podaje ich nazwy.')
     p.add_argument('-n', '--number-of-charts', help='Liczba wykresów do wyświetlenia', type=int, required=True)
     p.add_argument('-d', '--descriptions', help='Nazwy wykresów podawane są poprzez oddzielenie ich spacjami. Nazwy nie mogą znajdować się w cudzysłowiu. Przykład: "-d x1 x2 x3"',nargs='+', required= True)
+    p.add_argument('-c', '--cache', help='Liczba określająca ile elementów ma być wyświetlana w danym czasie', type=int, default=50)
 
     return p.parse_args()
 
@@ -23,52 +24,77 @@ p = parser()
 n = p.number_of_charts
 descriptions = tuple(p.descriptions)
 
-print(descriptions)
+if len(descriptions) != n:
+    raise p.error( "Liczba podanych nazw musi zgadzać się z liczbą wykresów n")
 
-fig, ax = plt.subplots(3)
-print("Start 2")
-fig.show()
+if n < 1:
+    raise p.error("Liczba wykresów nie może być mniejsza niż 1")
 
-print("Start 3")
-
-i = 0
-cache = 100
-x,y1, y2, y3 = [], [], [], []
-
-#while 1:
-#    line = sys.stdin.readline()
-for line in sys.stdin:
-    print(line, end='')
-    l = line.split()
-    l = list(map(float, l))
-    if len(l) < 3:
-        l = [0,0,0]
-    
-#    if l[2] < 10000:
-#        l[2] = 10000
-
-    x.append(i)
-    y1.append(l[0])
-    y2.append(l[1])
-    y3.append(l[2])
-
-    ax[0].plot(x,y1, 'r', )
-    ax[0].set_title("x")
-
-    ax[1].plot(x,y2, 'g', )
-    ax[1].set_title("y")
+# jeżeli rysowany będzie tylko jeden wykres
+if n!=1:
+    fig, ax = plt.subplots(n)
+    fig.tight_layout(pad=3)
+    fig.show()
+else:
+    fig = plt.figure()
+    ax = plt.axes() 
 
 
-    ax[2].plot(x,y3, 'y', )
-    ax[2].set_title("z")
-    # ax.legend(['x', 'y', 'z'])
+cacheI = 0
+cache = p.cache
+color = ['r', 'g', 'b']
+x = []
+y = []
+for j in range(0,n):
+    y.append([])
 
-    fig.canvas.draw()
+if n == 1:
+    for line in sys.stdin:
+        print(line, end='')
+        l = line.split()
+        l = list(map(float, l))
+        if len(l) < 3:
+            l = [0,0,0]
 
-    ax[0].set_xlim(left=max(0, i-cache), right=i+cache)
-    ax[1].set_xlim(left=max(0, i-cache), right=i+cache)
-    ax[2].set_xlim(left=max(0, i-cache), right=i+cache)
-    #plt.pause(0.0001)
-    i += 1
+        x.append(cacheI)
+        y[0].append(l[0])
+        ax.plot(x,y[0], 'r')
+        ax.set_title("{}".format(descriptions[0]))
+        ax.set_xlabel('t[n]')
 
+        fig.canvas.draw()
+        ax.set_xlim(left=max(0, cacheI-cache), right=cacheI)
+
+        plt.pause(0.0001)
+        cacheI += 1
+       
+        if len(y) >= cache:
+            del y[0]
+
+else:
+    for line in sys.stdin:
+        print(line, end='')
+        l = line.split()
+        l = list(map(float, l))
+        if len(l) < 3:
+            l = [0,0,0]
+        # dodanie pozycji na osi x
+        x.append(cacheI)
+        # rysowanie punktów
+        for j in range(n):
+            y[j].append(l[j])
+            ax[j].plot(x,y[j], 'r')
+            ax[j].set_title("{}".format(descriptions[j]))
+            ax[j].set_xlabel('t[n]')
+
+        fig.canvas.draw()
+        # przesuwanie wykresu w czasie
+        for j in range(n):
+            ax[j].set_xlim(left=max(0, cacheI-cache), right=cacheI)
+
+        plt.pause(0.0001)
+        cacheI += 1
+        for i in range(n):
+            if len(y[i]) >= cache:
+                del y[i][0]
 plt.close()
