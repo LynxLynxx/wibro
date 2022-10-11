@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 from cProfile import label
 from queue import Empty
@@ -30,11 +30,12 @@ if len(descriptions) != n:
 if n < 1:
     raise p.error("Liczba wykresów nie może być mniejsza niż 1")
 
-# jeżeli rysowany będzie tylko jeden wykres
+
 if n!=1:
     fig, ax = plt.subplots(n)
     fig.tight_layout(pad=3)
     fig.show()
+# jeżeli rysowany będzie tylko jeden wykres
 else:
     fig = plt.figure()
     ax = plt.axes() 
@@ -68,8 +69,9 @@ if n == 1:
         plt.pause(0.0001)
         cacheI += 1
        
-        if len(y) >= cache:
-            del y[0]
+    #    todo: poprawić usuwanie danych
+        # if len(y) >= cache:
+        #     del y[0]
 
 else:
     for line in sys.stdin:
@@ -94,7 +96,8 @@ else:
 
         plt.pause(0.0001)
         cacheI += 1
-        for i in range(n):
-            if len(y[i]) >= cache:
-                del y[i][0]
+        # todo: poprawić usuwanie danych
+        # for i in range(n):
+        #     if len(y[i]) >= cache:
+        #         del y[i][0]
 plt.close()
