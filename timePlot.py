@@ -7,9 +7,6 @@ import sys
 import numpy as np
 from matplotlib import pyplot as plt
 import numpy as np
-from matplotlib.animation import FuncAnimation
-import time
-from datetime import datetime
 import argparse
 
 def parser():
