@@ -32,6 +32,8 @@ if cache < 1:
 fig = plt.figure()
 ax = plt.axes(projection='3d')
 fig.canvas.mpl_connect('close_event', on_close)
+# ax.set_xlim3d()
+
 
 x,y,z = [], [], []
 
@@ -47,8 +49,13 @@ for line in sys.stdin:
     y.append(l[1])
     z.append(l[2])
 
-    ax.scatter3D(x,y,z, color='red')
+    ax.scatter3D(x,y,z, color='red', s=100)
+    ax.plot3D(x,y,z, 'red')
+    ax.set_zlim(13000, 16000)
+    ax.set_xlim(-6000, 0)
+    ax.set_ylim(-2000,0)
     ax.set_title(" ".join(description))
+    ax.set_xlabel("x")
 
     fig.canvas.draw()
 
