@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 
 import readline
 import serial
@@ -13,21 +13,28 @@ parser.add_argument('-o', '--output-filename', type=str, help="Nazwa pliku, w kt
 parser.add_argument('-n', '--number-of-sensors', type=int, help="Liczba kanłów (czujników) w strumieniu wejściowym.", required=False, default=1)
 args = parser.parse_args()
 
-if args.number-of-sensors == 4 or args.number-of-sensors == 2 or args.number-of-sensors == 1:
+if args.number_of_sensors == 4 or args.number_of_sensors == 2 or args.number_of_sensors == 1:
     pass
 else:
     raise Exception("Podano złą liczbę kanałów - dopuszczalne wartości to 1, 2 lub 4")
 
-fileName = args.output-filename
+fileName = args.output_filename
 portName = args.port
-baudRate = args.baud-rate
+baudRate = args.baud_rate
 
 serialConn = serial.Serial(portName, baudRate, timeout=4)
 # serialConn = serial.Serial("/dev/ttyUSB0", 115200, timeout=4)
 
+if (fileName != ''):
+    f = open( fileName, "w")
+
 while 1:
     rawData = serialConn.readline()
-    # print(rawData)
+    rawData = rawData.decode("utf-8")
+    print(rawData)
+    if (fileName != ''):
+        print(rawData, file=f) 
+        f.flush()             
     pos = 0
     convertData = []
     while pos + 4 < len(rawData):
