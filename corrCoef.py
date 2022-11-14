@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 
 import sys
 import numpy as np
@@ -16,7 +16,7 @@ def parser():
 p = parser()
 n = p.number_of_points
 
-#x1, x2 = [], []
+x1, x2 = [], []
 
 for i in range (0, n):
     x1.append(0)

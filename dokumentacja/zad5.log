@@ -1,16 +1,19 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.8)  8 NOV 2022 13:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  14 NOV 2022 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**zad5.tex
-(./zad5.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21>
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+**./zad5.tex
+(zad5.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-09-28>
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/mwcls\mwart.cls
+Document Class: mwart 2017/05/13 v0.75 A LaTeX document class (MW)
+*** Beta version. Formatting may change
+*** in future versions of this class.
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/mwcls\mw12.clo
+File: mw12.clo 2017/05/13 v0.75 A document class size option (MW)
 )
+\@parindent=\dimen138
 \c@part=\count185
 \c@section=\count186
 \c@subsection=\count187
@@ -21,67 +24,256 @@ File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \c@table=\count192
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen138
+\bibindent=\dimen139
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count193
-\l__pdf_internal_box=\box50
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/polski\polski.sty
+Package: polski 2021/08/25 v1.3.6 Polish language package
+
+   Inputenc package detected. Catcodes not changed.
+) (C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
 )
-(./zad5.aux)
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen140
+\stockheight=\dimen141
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+) (C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip49
+For additional information on amsmath, use the `?' option.
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen144
+))
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen145
+)
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen146
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count198
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks20
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks21
+\eqnshift@=\dimen147
+\alignsep@=\dimen148
+\tagshift@=\dimen149
+\tagwidth@=\dimen150
+\totwidth@=\dimen151
+\lineht@=\dimen152
+\@envbody=\toks22
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count271
+\float@exts=\toks24
+\float@box=\box53
+\@float@everytoks=\toks25
+\@floatcapt=\box54
+)
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count272
+\l__pdf_internal_box=\box55
+) (zad5.aux)
 \openout1 = `zad5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 13.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 13.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
-Overfull \hbox (28.97197pt too wide) in paragraph at lines 28--28
-[]\T1/cmr/bx/n/14.4 Pomiar w in-nym kierunku ni» ori-en-tacja wybranego
- []
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count273
+\scratchdimen=\dimen153
+\scratchbox=\box56
+\nofMPsegments=\count274
+\nofMParguments=\count275
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count276
+\MPscratchDim=\dimen154
+\MPnumerator=\count277
+\makeMPintoPDFobject=\count278
+\everyMPtoPDFconversion=\toks27
+)
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
 
-[1
+(C:\Users\rysie\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+<assets/circut.png, id=1, 684.5575pt x 251.94125pt>
+File: assets/circut.png Graphic file (type png)
+<use assets/circut.png>
+Package pdftex.def Info: assets/circut.png  used on input line 23.
+(pdftex.def)             Requested size: 350.99762pt x 129.1803pt.
+<assets/wibro1.drawio.png, id=3, 502.87875pt x 302.12875pt>
+File: assets/wibro1.drawio.png Graphic file (type png)
+<use assets/wibro1.drawio.png>
+Package pdftex.def Info: assets/wibro1.drawio.png  used on input line 33.
+(pdftex.def)             Requested size: 312.00119pt x 187.44696pt.
+<assets/IMG_20221108_124622.jpg, id=4, 2746.26pt x 3661.68pt>
+File: assets/IMG_20221108_124622.jpg Graphic file (type jpg)
+<use assets/IMG_20221108_124622.jpg>
+Package pdftex.def Info: assets/IMG_20221108_124622.jpg  used on input line 42.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./zad5.aux) ) 
+(pdftex.def)             Requested size: 234.00238pt x 311.99297pt.
+
+Underfull \vbox (badness 3000) has occurred while \output is active []
+
+ [1
+
+{C:/Users/rysie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./assets/cir
+cut.png>]
+<assets/timePlot1.png, id=13, 357.13425pt x 214.401pt>
+File: assets/timePlot1.png Graphic file (type png)
+<use assets/timePlot1.png>
+Package pdftex.def Info: assets/timePlot1.png  used on input line 50.
+(pdftex.def)             Requested size: 370.49881pt x 222.4287pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./assets/wibro1.drawio.png> <./assets/IMG_20221108_124622.jpg>]
+<assets/korelacja1.png, id=18, 358.33875pt x 215.30438pt>
+File: assets/korelacja1.png Graphic file (type png)
+<use assets/korelacja1.png>
+Package pdftex.def Info: assets/korelacja1.png  used on input line 57.
+(pdftex.def)             Requested size: 350.99762pt x 210.90814pt.
+<assets/IMG_20221108_124849.jpg, id=19, 2746.26pt x 3661.68pt>
+File: assets/IMG_20221108_124849.jpg Graphic file (type jpg)
+<use assets/IMG_20221108_124849.jpg>
+Package pdftex.def Info: assets/IMG_20221108_124849.jpg  used on input line 67.
+
+(pdftex.def)             Requested size: 272.99881pt x 363.95454pt.
+ [3 <./assets/timePlot1.png> <./assets/korelacja1.png>]
+<assets/wibro2.png, id=26, 540.0175pt x 302.12875pt>
+File: assets/wibro2.png Graphic file (type png)
+<use assets/wibro2.png>
+Package pdftex.def Info: assets/wibro2.png  used on input line 78.
+(pdftex.def)             Requested size: 350.99762pt x 196.38135pt.
+<assets/timePlot2.png, id=27, 358.33875pt x 213.04594pt>
+File: assets/timePlot2.png Graphic file (type png)
+<use assets/timePlot2.png>
+Package pdftex.def Info: assets/timePlot2.png  used on input line 86.
+(pdftex.def)             Requested size: 350.99762pt x 208.69582pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<assets/korelacja2.png, id=28, 360.59718pt x 211.54031pt>
+File: assets/korelacja2.png Graphic file (type png)
+<use assets/korelacja2.png>
+Package pdftex.def Info: assets/korelacja2.png  used on input line 93.
+(pdftex.def)             Requested size: 350.99762pt x 205.9072pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./assets/IMG_20221108_124849.jpg>] [5 <./assets/wibro2.png> <./assets/timeP
+lot2.png>] [6 <./assets/korelacja2.png>] (zad5.aux) ) 
 Here is how much of TeX's memory you used:
- 684 strings out of 480247
- 10434 string characters out of 5896151
- 298077 words of memory out of 5000000
- 18690 multiletter control sequences out of 15000+600000
- 475833 words of font info for 42 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 34i,5n,38p,216b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/
-lynx/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/
-lynx/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk>
-Output written on zad5.pdf (2 pages, 28642 bytes).
+ 2728 strings out of 475385
+ 42378 string characters out of 2776906
+ 381853 words of memory out of 3000000
+ 24094 multiletter control sequences out of 15000+600000
+ 478741 words of font info for 51 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,7n,62p,535b,245s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\rysie\AppData\L
+ocal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\rysie\App
+Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\rys
+ie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk><C:/User
+s/rysie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb
+><C:/Users/rysie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb><C:/Users/rysie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb><C:/Users/rysie/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb>
+Output written on zad5.pdf (6 pages, 3524477 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 14 compressed objects within 1 object stream
+ 201 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import sys
 import numpy as np
@@ -43,7 +43,8 @@ for line in sys.stdin:                  # czytamy całą linię
         for q in f:
             o = o + str(q.real) + " " + str(q.imag) + " "
         
-        print(o) 
+        # print("1")
+        print(o)
         if (p.output_file != ''):
             print(o, file=f)              
             f.flush()
