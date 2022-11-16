@@ -11,6 +11,10 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[]{float}
+\usepackage{hyperref}
+
+\linespread{1.3}
+%\setlength{\parskip}{5 pt}
 \begin{document}
 
 \maketitle
@@ -28,31 +32,41 @@ Układ wielokanałowego synchronicznego rejestratora drgań został osadzony na 
 \section{Porównanie synchronicznego rejestratora drgań z pomiarem wzorcowym}
 By sprawdzić poprawność działania synchronicznego rejestratora drgań, przeprowadzono badanie porównawcze. Pomiarem wzorcowym był sygnał uzyskany z laserowego czujnika położenia. Jako, że SRD (synchroniczny rejestrator drgań) zbiera dane na temat przyspieszeń obiektu w czasie, a laserowy czujnik położenia obiektu w czasie, należało przeprowadzić podwójne różniczkowanie otrzymanych wyników z sygnału wzorcowego, co pozwala na porównanie dwóch jednakowych wielkości fizycznych. 
 Blokowy schemat stanowiska badawczego został przedstawiony na Rysunku~\ref{fig:wibro1}. 
-\begin{figure}[th]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{assets/wibro1.drawio}
 	\caption{Schemat blokowy stanowiska badawczego wraz ze sprzętem badawczym}
 	\label{fig:wibro1}
 \end{figure}
 
+Proces analizy danych został przedstawiony na Rysunku~\ref{fig:analizadanych}. Blok składa się z procesu zbierania danych otrzymanych w czasie rzeczywistym oraz rysowaniu przebiegu czasowego dla otrzymanych danych. Równocześnie program oblicza korelacje pomiędzy dwoma sygnałami. Argumentem potrzebnym do tych obliczeń jest długość ciągu czasowego do obliczenia korelacji. Po obliczeniach rysowany jest wykres korelacji.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{assets/analiza_danych.drawio}
+	\caption{Schemat blokowy bloku analiza danych.}
+	\label{fig:analizadanych}
+\end{figure}
 
 Rysunek~\ref{fig:img20221108124622} przedstawia sposób zamontowania elementów pomiarowych na stanowisku badawczym. Oba elementy pomiarowe posiadają takie same kierunki oraz zwroty w przestrzeni kartezjańskiej.
-\begin{figure}[H]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.6\linewidth]{assets/IMG_20221108_124622}
 	\caption{Czujnik położenia oraz SRD zamontowany na obiekcie badawczym.}
 	\label{fig:img20221108124622}
 \end{figure}
  
+Otrzymany przebieg czasowy z przeprowadzonego badania został przedstawiony na Rysunku~\ref{fig:timeplot1}. Analizując przebieg możemy zauważyć różnice w otrzymanych danych z czujników pomiarowych. Dane otrzymane z czujnika położenia mają większą wartość przyspieszania, niż te które zostały otrzymane z MPU6050. Różnice w amplitudach sygnałów mogą występować przez różnicę wielkości stałej składowej danych sygnałów. Dane wykorzystane do stworzenia tego wykresu znajdują się w pliku "Przebieg czasowy 1.pdf"
 
-\begin{figure}[H]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.95\linewidth]{assets/timePlot1}
 	\caption{Przebiegi czasowe otrzymane z obu czujników. Niebieski - akcelerometr, pomarańczowy - czujnik położenia}
 	\label{fig:timeplot1}
 \end{figure}
 
-\begin{figure}[H]
+Lecz dzięki przeprowadzeniu korelacji obu sygnałów (Rysunek~\ref{fig:korelacja1}) widzimy, że sygnały współgrają ze sobą na poziomie $1 - 0,8$, choć w kilku miejscach poziom ten spada - można uznać to za błąd pomiarowy. Otrzymany wynik jest bardzo przyzwoitym efektem przeprowadzonego badania. Dane wykorzystane do stworzenia tego wykresu zostały przedstawione w pliku "Korelacja 1.pdf".
+
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{assets/korelacja1}
 	\caption{Korelacja sygnałów otrzymanych z czujnika położenia oraz SRD}
@@ -62,38 +76,46 @@ Rysunek~\ref{fig:img20221108124622} przedstawia sposób zamontowania elementów 
 %\newpage
 \section{Pomiar w innym kierunku niż orientacja wybranego czujnika układu pomiarowego}
 Drugim przeprowadzonym badaniem było porównanie otrzymanych wyników z wzorcowego czujnika oraz testowanego urządzenia. Badanie polegało na tym, że czujnik położenia zostanie skierowany pod pewnym kątem $\theta$ oraz $\gamma$, a następnie otrzymane w ten sposób sygnały zostaną ze sobą porównane poprzez korelacje. Rysunek~\ref{fig:img20221108124849} przedstawia proces zbierania danych.
-\begin{figure}[th!]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{assets/IMG_20221108_124849}
+	\includegraphics[width=0.6\linewidth]{assets/IMG_20221108_124849}
 	\caption{Proces zbierania danych ze stanowiska badawczego, gdy czujnik położenia nachylony jest pod kątem $\theta$ oraz $\gamma$ do badanego obiektu}
 	\label{fig:img20221108124849}
 \end{figure}
 
 Tak samo jak w pierwszym badaniu by porównać dane otrzymane z dwóch czujników, przeprowadzono podwójne różniczkowane sygnału otrzymanego z czujnika położenia. Jako, że czujnik położenia znajdował się w pewnym nachyleniu do obiektu badawczego, dane z akcelerometru musiały zostać obrócone o wartość wektora $ \begin{pmatrix}0,25 & 0,25 & 1\end{pmatrix} $. Schemat blokowy stanowiska badawczego przedstawia Rysunek~\ref{fig:wibro2}.
 
-
-
-\begin{figure}[th]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{assets/wibro2}
 	\caption{Schemat blokowy stanowiska badawczego wraz ze sprzętem badawczym gdy czujnik położenia jest nachylony do obiektu badawczego}
 	\label{fig:wibro2}
 \end{figure}
 
+Blok analizy danych jest taki sam jak w pierwszym badaniu przedstawionym na Rysunku~\ref{fig:analizadanych}.
 
-\begin{figure}[h]
+Przebiegi czasowe obu sygnałów różnią się amplitudą, lecz częstotliwości sygnałów są bardzo podobne do siebie. Większa amplituda danych otrzymanych z czujnika położenia może wynikać z potrzeby podwójnego różniczkowania, co zmniejsza rozdzielczość otrzymanych danych z tego sensora. Rysunek~\ref{fig:timeplot2} przedstawia przebieg czasowy otrzymany podczas drugiego badania. Dane wykorzystane do stworzenia tego wykresu znajdują się w pliku: "Przebieg czasowy 2.pdf"
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{assets/timePlot2}
 	\caption{Przebieg czasowy}
 	\label{fig:timeplot2}
 \end{figure}
 
-\begin{figure}[h]
+Po przeprowadzeniu korelacji obu sygnałów otrzymano wykres przedstawiony na Rysunku~\ref{fig:korelacja2}. Spójność sygnałów utrzymuje się na poziomie $ 1 - 0,85 $ lecz większość danych znajduje się w zakresie $ 1 - 0.9 $ co daje bardzo wysoki wynik korelacji dla tego badania. Dane, z których powstał ten wykres znajdują się w w pliku: "Korelacja 2.pdf".
+
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{assets/korelacja2}
 	\caption{Korelacja sygnałów}
 	\label{fig:korelacja2}
 \end{figure}
+
+
+\pagebreak
+%\newpage
+\section{Konkluzje}
+Wszystkie efekty potrzebne do realizacji tego zadania zostały wykonane. Powstał demonstrator kompletnego systemu monitoringu i analizy drgań oraz podczas prowadzenia badań zaobserwowano poprzez metody empiryczne poprawność działania systemu monitoringu i analizy drgań. Empiryczne obserwacje potwierdzono wynikami wykonanych obliczeń wg modelu matematycznego, gdzie porównano pomiary rzeczywiste z pomiarami wzorcowymi. Wyniki tych badań są zadowalające i pozwalają na dalsze możliwości rozwijania projektu. 
 
 
 
